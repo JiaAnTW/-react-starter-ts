@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import { Provider } from 'react-redux';
+import { RouterProvider } from 'react-router-dom';
 
 import store from './redux/store';
-
-import Router from './pages/Router';
+import router from './pages/router';
 
 const App: FC<{}> = () => {
     return (
         <Provider store={store}>
-            <Router />
+            <RouterProvider router={router} />
         </Provider>
     );
 };
